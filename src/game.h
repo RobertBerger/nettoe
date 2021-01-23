@@ -1,3 +1,6 @@
+#ifndef __GAME_H__
+#define __GAME_H__ 1
+
 /* netToe Version 1.5.1
  *
  * Copyright 2000,2001 Gabriele Giorgetti <ggdev@users.sourceforge.net>
@@ -18,6 +21,15 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
+
+
+    #if defined(GAME_PRIVATE_PROTOTYPES)
+        #define EXTERN
+    #else
+        #define EXTERN  extern
+    #endif
+
+
 
 #define HOMEPAGE     "http://nettoe.sourceforge.net/"
 #define AUTHOR_EMAIL "<ggdev@users.sourceforge.net>"
@@ -43,8 +55,10 @@
 
 #define MAX_PNAME_LEN 32 /* this define max chars for the player names*/
 
-int NO_BEEP;
+EXTERN int NO_BEEP;
 
-int NO_COLORS;
+EXTERN int NO_COLORS;
 
-int addrfamily;
+EXTERN int addrfamily;
+
+#endif /* __GAME_H__ */
