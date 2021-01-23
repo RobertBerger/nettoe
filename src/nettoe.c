@@ -43,6 +43,8 @@
  */
 #include "misc.h"
 #include "network.h"
+
+#define GAME_PRIVATE_PROTOTYPES
 #include "game.h"
 #include "board.h"
 
